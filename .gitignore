@@ -1,0 +1,21 @@
+# Umgebung
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# PyInstaller-Ausgaben (die .exe gehört in ein GitHub-Release, nicht ins Repo)
+build/
+dist/
+
+# Exporte
+*.pdf
+Backplan_*.csv
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store

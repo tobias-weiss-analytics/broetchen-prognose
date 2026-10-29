@@ -1,0 +1,31 @@
+[project]
+name = "broetchen-prognose"
+version = "3.1.0"
+description = "Desktop-App für Absatzprognose und Backmengenplanung in Bäckereifilialen (PySide6, scikit-learn)."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Tobias Weiß" }]
+dependencies = [
+    "holidays>=0.60",
+    "matplotlib>=3.10",
+    "numpy>=2.3",
+    "pandas>=2.3",
+    "pyside6>=6.9",
+    "reportlab>=4.4",
+    "scikit-learn>=1.7",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6", "pyinstaller>=6.15"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning"]
